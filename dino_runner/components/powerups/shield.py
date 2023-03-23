@@ -1,4 +1,4 @@
-from dino_runner.utils.constants import SHIELD, SHIELD_TYPE
+from dino_runner.utils.constants import *
 from dino_runner.components.powerups.power_up import PowerUp
 
 

@@ -1,8 +1,9 @@
 import pygame
 import os
-
+pygame.init() 
+pygame.mixer.init()
 # Global Constants
-TITLE = "Chrome Dino Runner"
+TITLE = "Godzilla Runner"
 SCREEN_HEIGHT = 600
 SCREEN_WIDTH = 1100
 FPS = 30
@@ -12,13 +13,13 @@ IMG_DIR = os.path.join(os.path.dirname(__file__), "..", "assets")
 ICON = pygame.image.load(os.path.join(IMG_DIR, "DinoWallpaper.png"))
 
 RUNNING = [
-    pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRun1.png")),
     pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRun2.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRun3.png")),
 ]
 
 RUNNING_SHIELD = [
     pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRun1Shield.png")),
-    pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRun2.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRun2Shield.png")),
 ]
 
 RUNNING_HAMMER = [
@@ -37,7 +38,7 @@ DUCKING = [
 
 DUCKING_SHIELD = [
     pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoDuck1Shield.png")),
-    pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoDuck2.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoDuck2Shield.png")),
 ]
 
 DUCKING_HAMMER = [
@@ -68,6 +69,11 @@ HAMMER = pygame.image.load(os.path.join(IMG_DIR, 'Other/hammer.png'))
 BG = pygame.image.load(os.path.join(IMG_DIR, 'Other/Track.png'))
 
 HEART = pygame.image.load(os.path.join(IMG_DIR, 'Other/SmallHeart.png'))
+
+SOUNDS_DIR = os.path.join(os.path.dirname(__file__), "..", "sound")
+DEATH_SOUND = pygame.mixer.Sound(os.path.join(SOUNDS_DIR, "sons_death_sound.wav"))
+JUMP_SOUND = pygame.mixer.Sound(os.path.join(SOUNDS_DIR, "sons_jump_sound.wav"))
+SCORE_SOUND = pygame.mixer.Sound(os.path.join(SOUNDS_DIR, "sons_score_sound.wav"))
 
 DEFAULT_TYPE = "default"
 SHIELD_TYPE = "shield"
